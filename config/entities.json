@@ -207,6 +207,40 @@
                 "message": "lo premi",
                 "transform": "+"
             }
-        }  
+        }
+    }      
+    "M": {
+        "name": "persona",
+        "description": "sembra una persona, chi sa chi è!",
+        "color": "purple",
+        "interactions": {
+            "no-item": {
+                "message": "in relatà è una statua" 
+            }
+            "T": {
+               "message": "hai frantumato una statua millenaria per dell'idrogeno??!" 
+               "transform": "H"
+            }
+        }
+    },
+    "T": {
+        "name": "trapano"
+        "description": "è un trapano un po' arruginito"
+        "color": "cyan",
+        "interaction": {
+            "no-item":{
+                "message": "lo raccogli",
+                "transform": " ",
+                "pickup": true           
+
+            }
+        }
+
+    },
+    "E": {
+        "name": "televisore"
+        "description": "è una vecchia tv"
+        "color": "black"
     }
+    
 }
