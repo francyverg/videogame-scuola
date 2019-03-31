@@ -220,6 +220,7 @@
             "T": {
                "message": "hai frantumato una statua millenaria per dell'idrogeno??!" 
                "transform": "H"
+               "remove_from_inventory": true
             }
         }
     },
