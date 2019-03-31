@@ -8,12 +8,12 @@
     "1": {
         "name": "Cucina",
         "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
-        "color": "red"
+        "color": "white"
     },
     
     "2": {
-        "name": "Sogno",
-        "description": "sei evidentemente in un sogno",
-        "color": "black"
+        "name": "stanza da letto",
+        "description": "Il disordine regna sovrano, trovare qualcosa qua in mezzo sarà difficile",
+        "color": "white"
     }
 }
