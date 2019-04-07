@@ -1,5 +1,5 @@
 {
-    "S": {
+    "O": {
         "name": "Macchia di sangue",
         "color": "red",
         "description": "Sembra essere ancora fresco...",
@@ -63,7 +63,7 @@
         }    
     },
 
-    "W": {
+    "E": {
         "name": "Finestra",
         "description": "Alcuni pezzi di vetro sono aldati in frantumi",
         "color": "orange",
