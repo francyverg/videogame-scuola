@@ -41,7 +41,7 @@ class Bg:
     magenta='\033[45m'
     cyan='\033[46m'
     white='\033[47m'
-
+    grey='\33[100m'
 
 class Directions:
     N = 0
@@ -50,6 +50,9 @@ class Directions:
     E = 3
 
 
+pf = 0 #punti follia
+x = 0
+mad = 0
 class Entity:
     def __init__(self, room, x, y, graphic=None, color=None, name=None, description=None, interactions=None):
         self.room = room
@@ -93,6 +96,11 @@ class Entity:
 
                 if "pickup" in action:
                     player.inventory[self.graphic] = self
+
+                if "pf" in action:                  #prende il numero dei punti follia contenuto nel file json
+                    global pf                       #trasformandolo in un intero lo passa alla funzione contenuta nella class Player
+                    pf = int(action["pf"])
+                    Player.madness(mad,pf) 
 
                 if item is not None and action.get("remove_from_inventory", False) == True :
                     del player.inventory[item.graphic]
@@ -145,6 +153,15 @@ class Player(Mobile):
         Mobile.__init__(self, room, x, y, "P", Bg.blue)
         self.inventory = {}
 
+    def madness(mad,pf):      
+        mad = 100-pf
+        x = 100-mad
+        if x < 100:
+            a=print("Punti follia: ",pf)
+        else:
+            self.game.game_over(self,"Sei totalmente impazzito")           #perdi quando arrivi a 100 pf
+            
+
     def draw_inventory(self):
         print("Inventario:")
         if len(self.inventory) == 0:
@@ -181,7 +198,10 @@ class Game:
         file = open("./config/{}.json".format(key))
         config[key] = json.load(file)
         file.close()
-
+    #if "mad" in game.json:                
+     #   global mad 
+      #  mad = int(game["mad"])
+       # Player.madness(mad,pf)     
     def __init__(self):
         self.rooms = []
         for i in range(len(Game.config["rooms"])):
@@ -228,6 +248,19 @@ class Game:
                 print("\t- usa {} con {} con {}{}".format(inventory_entity.name, entity.name, inventory_entity, entity))
 
         print("\t- QUIT per uscire")
+        print()
+
+        #if "pf" in interaction["action"]:
+        mad = 100-pf
+        x = 100-mad
+        follia = x           #dovrebbe stampare i pf attuali del giocatore incrementandosi tramite pf
+        print("Punti follia: ", follia,"/ 100")
+
+       # follia = 0
+        #follia = Player.madness
+        #print("Punti follia: {}".format(Player.madness))
+        #print("Punti follia: ", x)
+
 
         action = input().upper()
         if action == "W":

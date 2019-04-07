@@ -1,86 +1,107 @@
 {
-    "O": {
-        "name": "coccinella",
+    "S": {
+        "name": "Macchia di sangue",
         "color": "red",
-        "description": "che bella!",
+        "description": "Sembra essere ancora fresco...",
         "interactions":  {
             "no-item": {
-                "message": "la schiacci",
+                "message": "Ti sei sporcato le mani col sangue",
+                "pf": "10",
                 "transform": " "
             }
         }
     },
-    "H": {
-        "name": "idrogeno",
-        "description": "e' dell'idrogeno, non chiedermi come fai a percepirlo...",
+    "C": {
+        "name": "Carrozzina",
+        "description": "E' solo una vecchia carrozzina arruginita e cigolante",
         "color": "magenta",
         "interactions": {
             "no-item": {
-                "message": "ma scusa... cosa ti aspetti di fare esattamente con l'idrogeno..."
+                "message": "Ti sei seduto sulla carrozzina e hai avvertito un brivido lungo la schiena",
+                "pf": "10"
             },
-            "L": {
-                "message": "opppero'! hai condito le lasagne con l'idrogeno sprigionando una reazione unicornosa",
-                "transform": "U"
+            "T": {
+                "message": "Hai usato le tenaglie per tagliare i raggi delle ruote della carrozzina",
+                "transform": "R"
             }
         }
     },
-    "L": {
-        "name": "lasagne",
-        "description": "sembrano appetitose",
+    "T": {
+        "name": "Tenaglie per ossa",
+        "description": "Chissa' chi era il chirurgo che le usava",
         "color": "green",
         "interactions": {
             "no-item": {
-                "message": "fa sempre comodo avere delle lasagne in tasca",
+                "message": "potrebbero tornare utili",
                 "transform": " ",
                 "pickup": true
             }
         }
     },
-    "B": {
+
+    "R": {
         "name": "bomba",
         "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
         "color": "red",
         "interactions": {
             "no-item": {
-                "message": "biiiip biiiiiiip biiiiiiiiiiiip",
-                "game_over": "la bomba esplode demolendo l'intera stanza"
-            },
-
-            "V": {
-                "message": "tagli con attenzione un filo che penzola da un lato dell'ordigno...",
-                "win": "hai disinnescato la bomba con successo, sei sano e salvo!"
-            },
-
-            "L": {
-                "message": "sei un pervertito"
+                "message": "Ti affacci alla finestra, ma qualcosa ti spinge violentemente da dietro e cadi",
+                "game_over": "Non volevi uscire? Anche se con un metodo alternativo ce l'hai fatta no?"
             }
-        }
+        }    
     },
+        
     "1": {
-        "name": "porta",
-        "description": "e' una porta",
+        "name": "Porta",
+        "description": "E' una porta",
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "si apre",
+                "message": "Si e' aperta",
                 "move_to_room": 1
             }
         }
     },
+
     "2": {
-        "name": "porta",
-        "description": "e' una porta",
+        "name": "Porta",
+        "description": "E' una porta semi-bruciata",
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "quale porta scusa???",
-                "transform": "L"
+                "message": "Si e' aperta",
+                "move_to_room": 2
             }
         }
     },
+
+    "3": {
+        "name": "Porta",
+        "description": "E' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "Si e' aperta",
+                "move_to_room": 3
+            }
+        }
+    },
+
+    "4": {
+        "name": "Porta",
+        "description": "E' una porta",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "Si e' aperta",
+                "move_to_room": 4
+            }
+        }
+    },
+
     "0": {
-        "name": "porta",
-        "description": "e' una porta",
+        "name": "Porta",
+        "description": "E' una porta",
         "color": "blue",
         "interactions": {
             "no-item": {
@@ -89,159 +110,129 @@
             }
         }
     },
+
     "Q": {
-        "name": "quadro",
-        "description": "e' proprio un bel quadro",
+        "name": "Quadro",
+        "description": "La tela e' stata tagliata da qualcosa",
         "color": "blue",
         "interactions": {
             "no-item": {
-                "message": "spostando il quadro ti accorgi che dietro nasconte una cassaforte",
+                "message": "Non studi mai arte e ti metti a guardare i quadri proprio ora?!"
+            }
+        }
+    },
+
+    "D": {
+        "name": "Dipinto",
+        "description": "E' un \"normale quadro\" come tutti gli altri che ci sono qua dentro",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "Spostando il quadro la cornice va in mille pezzi e ti rimane solo un frammento della tela",
                 "transform": "F"
             }
         }
     },
 
     "F": {
-        "name": "cassaforte",
-        "description": "e' una cassaforte chiusa",
+        "name": "Frammento di tela",
+        "description": "E' solo un pezzo di tela rovinato, cosa credi di farci esattamente?",
         "color": "yellow",
         "interactions": {
-            "K": {
-                "message": "la chiave entra perfettamente nella serratura; la giri",
-                "transform": "V",
+            "N": {
+                "message": "Hai messo il pezzo di tela sotto la luce della lampada ed è apparsa una parola:\n010011000100100101000010010001010101001001001111",
+                "transform": "P",
                 "remove_from_inventory": true
             }
         }
     },
 
-    "V": {
-        "name": "Tenaglie",
-        "description": "sono delle tenaglie piuttosto affilate",
-        "color": "green",
+    "P": {
+        "name": "Pezzo di tela con messaggio",
+        "description": "C'è' una strana scritta sbiadita sulla tela",
+        "color": "red",
         "interactions": {
             "no-item": {
-                "message": "le raccogli",
+                "message": "Hai ripreso la tela e impari la parola scritta sopra",
                 "transform": " ",
                 "pickup": true
             }
         }
     },
 
-    "P": {
-        "name": "pianta",
-        "description": "questa pianta non viene annaffiata da molto tempo",
-        "color": "green",
+    "L": {
+        "name": "Lama",
+        "description": "E' una vecchia lama, ma ancora parecchio affilata",
+        "color": "grey",
         "interactions": {
             "no-item": {
-                "message": "spostando il vaso noti qualcosa di interessante",
-                "transform": "K"
+                "message": "Hai preso la lama",
+                "transform": " ",
+                "pickup": true
             }
         }
     },
 
-    "C": {
-        "name": "candelabro",
-        "description": "un vecchio candelabro arrugginito",
+    "N": {
+        "name": "Lampda accesa",
+        "description": "Forse qualcun'altro era gia' stato qui poco tempo fa...Chissa' se ce l'ha fatta ad uscire",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "Non credo che spegnerla sia una genialata"
+            }
+        }
+    },
+
+    "B": {
+        "name": "Barella",
+        "description": "E' una barella parecchio impolverata",
         "color": "yellow",
         "interactions": {
-            "V": {
-                "message": "mmm, ha proprio senso... abra cadabra!",
-                "transform": " ",
-                "pickup": true
-            },
-            "C": {
-                "message": "mindfuckkkkk!!!!",
-                "transform": "U"
-            }
-        }
-    },
-
-    "U": {
-        "name": "unicorno",
-        "description": "che splendido esemplare fatato!",
-        "color": "blue",
-        "interactions": {
             "no-item": {
-                "message": "che splendida sensazione",
-                "win": "voli via contento e vivrai una vita fatta di soddisfazioni cucciolose"
-            },
-
-            "L": {
-                "message": "quello che una volta  era un leggiadro  unicorno ora e' un unicorno obeso! non volera' mai piu'",
-                "game_over": "peccato!"
+                "message": "Sentendoti improvvisamente stanco ti ci sdrai sopra, ma il tuo corpo si paralizza, senti strani stridii, passi pesanti e...",
+                "game_over": "Attento non devi occupare il posto di un altro...non sono molto amichevoli qui"
             }
         }
     },
 
     "K": {
-        "name": "chiave",
-        "description": "e' una piccola chiave",
+        "name": "Mazzo di chiavi",
+        "description": "E' un mazzo pieno di chiavi, anche se alcune sono spezzate",
         "color": "yellow",
         "interactions": {
             "no-item": {
-                "message": "la raccogli",
+                "message": "Hai preso il mazzo di chiavi",
                 "transform": " ",
                 "pickup": true
             }
         }
     },
 
-    "+": {
-        "name": "interruttore",
-        "description": "e' un interruttore posizionato su ACCESO",
-        "color": "black",
+    "F": {
+        "name": "Fantasma",
+        "description": "E' APPARSO UN FANTASMA VATTENE VIA DA QUI!",
+        "color": "white",
         "interactions": {
             "no-item": { 
-                "message": "lo premi",
-                "transform": "-"
+                "message": "Provi a parlare col fantasma che continua a dire con voce sibilante:\n01000001010010010101010101010100010000010100110101001001"
+            },
+            "P": {
+                "message": "Dici al fantasma la strana parola scritta sulla tela.\nImmediatamente il fantasma smette di parlare, si solleva da terra e vieni travolto da una luce accecante.",
+                "win": "Quando riapri gli occhi sei parecchio confuso.\nTi accorgi di essere nel tuo letto con tua madre che apre le tapparelle per farti svegliare e che continua ad urlare: ALZATI!"
             }
         }
     },
 
     "-": {
         "name": "interruttore",
-        "description": "e' un interruttore posizionato su SPENTO",
+        "description": "E' un interruttore posizionato su SPENTO",
         "color": "black",
         "interactions": {
             "no-item": { 
-                "message": "lo premi",
-                "transform": "+"
+                "message": "Hai premuto l'interruttore",
+                "transform": "F"
             }
-        }
-    }      
-    "M": {
-        "name": "persona",
-        "description": "sembra una persona, chi sa chi è!",
-        "color": "purple",
-        "interactions": {
-            "no-item": {
-                "message": "in relatà è una statua" 
-            }
-            "T": {
-               "message": "hai frantumato una statua millenaria per dell'idrogeno??!" 
-               "transform": "H"
-               "remove_from_inventory": true
-            }
-        }
-    },
-    "T": {
-        "name": "trapano"
-        "description": "è un trapano un po' arruginito"
-        "color": "cyan",
-        "interaction": {
-            "no-item":{
-                "message": "lo raccogli",
-                "transform": " ",
-                "pickup": true           
-
-            }
-        }
-
-    },
-    "E": {
-        "name": "televisore"
-        "description": "è una vecchia tv"
-        "color": "black"
+        }  
     }
-    
 }
