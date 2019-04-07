@@ -11,6 +11,7 @@
             }
         }
     },
+
     "C": {
         "name": "Carrozzina",
         "description": "E' solo una vecchia carrozzina arruginita e cigolante",
@@ -19,30 +20,53 @@
             "no-item": {
                 "message": "Ti sei seduto sulla carrozzina e hai avvertito un brivido lungo la schiena",
                 "pf": "10"
-            },
-            "T": {
-                "message": "Hai usato le tenaglie per tagliare i raggi delle ruote della carrozzina",
-                "transform": "R"
             }
         }
     },
+
+    "X": {
+        "name": "Tubature",
+        "description": "Sono le vecchie tubature dello scarico",
+        "color": "magenta",
+        "interactions": {
+            "no-item": {
+                "message": "non puoi passare oltre, il passaggio e' ostruito",
+            },
+            "T": {
+                "message": "Hai usato il segaossa per tagliare le tubature",
+                "transform": " "
+            }
+        }
+    },
+
     "T": {
-        "name": "Tenaglie per ossa",
-        "description": "Chissa' chi era il chirurgo che le usava",
+        "name": "Segaossa",
+        "description": "Chissa' chi era il chirurgo che lo usava",
         "color": "green",
         "interactions": {
             "no-item": {
-                "message": "potrebbero tornare utili",
+                "message": "Potrebbe tornare utile",
                 "transform": " ",
                 "pickup": true
             }
         }
     },
 
-    "R": {
-        "name": "bomba",
-        "description": "e' una bomba pronta a detonare, devo sbrigarmi a disinnescarla!",
-        "color": "red",
+    "V": {
+        "name": "Vasca da bagno",
+        "description": "E' una vasca da bagno, c'è un po' di sangue secco all'interno",
+        "color": "blue",
+        "interactions": {
+            "no-item": {
+                "message": "......"                
+            }
+        }    
+    },
+
+    "W": {
+        "name": "Finestra",
+        "description": "Alcuni pezzi di vetro sono aldati in frantumi",
+        "color": "orange",
         "interactions": {
             "no-item": {
                 "message": "Ti affacci alla finestra, ma qualcosa ti spinge violentemente da dietro e cadi",
@@ -50,7 +74,29 @@
             }
         }    
     },
-        
+
+    "G": {
+        "name": "Gabinetto",
+        "description": "Emana un odore molto sgradevole",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "Pensarai ai tuoi bisogni piu' tardi"
+            }
+        }    
+    },
+      
+    "U": {
+        "name": "Lavandino",
+        "description": "Avrebbe davvero bisogno di una ripulita",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "Ti affacci alla finestra, ma qualcosa ti spinge violentemente da dietro e cadi"
+            }
+        }    
+    },
+
     "1": {
         "name": "Porta",
         "description": "E' una porta",
@@ -127,14 +173,14 @@
         "description": "E' un \"normale quadro\" come tutti gli altri che ci sono qua dentro",
         "color": "blue",
         "interactions": {
-            "no-item": {
+            "A": {
                 "message": "Spostando il quadro la cornice va in mille pezzi e ti rimane solo un frammento della tela",
-                "transform": "F"
+                "transform": "Y"
             }
         }
     },
 
-    "F": {
+    "Y": {
         "name": "Frammento di tela",
         "description": "E' solo un pezzo di tela rovinato, cosa credi di farci esattamente?",
         "color": "yellow",
@@ -162,19 +208,48 @@
 
     "L": {
         "name": "Lama",
-        "description": "E' una vecchia lama, ma ancora parecchio affilata",
+        "description": "E' una vecchia lama, non è molto affilata",
         "color": "grey",
         "interactions": {
             "no-item": {
                 "message": "Hai preso la lama",
                 "transform": " ",
                 "pickup": true
-            }
+            },
+            "Z": {
+                "message":"sei riuscito ad affilarla per bene",
+                "transform": "A",
+                "remove_from_inventory": true
+            }    
         }
     },
+    "Z": {
+        "name": "arrotolino",
+        "description": "Serve per affilare le lame",
+        "color": "red",
+        "interactions": {
+            "no-item": {
+                "message": "sei stupido?! così ti tagli la mano...",
+                "game_over": "Ti sei tagliato la mano e muori dissanguato... sei stato un po' stupido"
+            },
+            
+        }
+    },
+    "A": {
+        "name": "lama affilata",
+        "description": "Hai affilato la lama per bene",
+        "color": "grey",
+        "interactions": {
+            "no-item": {
+                "message": "Hai preso la lama affilata",
+                "transform": " ",
+                "pickup": true
+            }        
 
+        }
+    },
     "N": {
-        "name": "Lampda accesa",
+        "name": "Lampada accesa",
         "description": "Forse qualcun'altro era gia' stato qui poco tempo fa...Chissa' se ce l'ha fatta ad uscire",
         "color": "green",
         "interactions": {
@@ -192,19 +267,6 @@
             "no-item": {
                 "message": "Sentendoti improvvisamente stanco ti ci sdrai sopra, ma il tuo corpo si paralizza, senti strani stridii, passi pesanti e...",
                 "game_over": "Attento non devi occupare il posto di un altro...non sono molto amichevoli qui"
-            }
-        }
-    },
-
-    "K": {
-        "name": "Mazzo di chiavi",
-        "description": "E' un mazzo pieno di chiavi, anche se alcune sono spezzate",
-        "color": "yellow",
-        "interactions": {
-            "no-item": {
-                "message": "Hai preso il mazzo di chiavi",
-                "transform": " ",
-                "pickup": true
             }
         }
     },
@@ -234,5 +296,17 @@
                 "transform": "F"
             }
         }  
+    },
+
+    "K": {
+        "name": "vaso semi-distrutto",
+        "description": "Questo vaso è molto vecchio e molto malandato",
+        "color": "green",
+        "interactions": {
+            "no-item": {
+                "message": "C'è qualcosa nel fondo...",
+                "trasform": "L"
+            }
+        }
     }
 }

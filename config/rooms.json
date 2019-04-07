@@ -1,19 +1,26 @@
 {
     "0": {
-        "name": "Sala",
-        "description": "Questo luogo e' abbastanza accogliente nonostante il senso di claustrofobia che ti trasmette",
+        "name": "Atrio"
+        "description": "Sembra un po' inquietante, come facevano a vivere qui?!"
         "color": "white"
-    },
-
+    }
     "1": {
-        "name": "Stanza da letto",
-        "description": "E' tutto molto disordinato. Sembra che nessuno abbia riordinato da molto tempo",
+        "name": "Camera da letto"
+        "description": "Dovrebbe essere una camera da letto ma è piena di sangue"
         "color": "white"
-    },
-    
+    }
     "2": {
-        "name": "stanza da letto",
-        "description": "Il disordine regna sovrano, trovare qualcosa qua in mezzo sarà difficile",
+        "name": "bagno"
+        "description": "Questo luogo è sudicio e degradato, pensare che prima ci abitavano"
         "color": "white"
+    }
+    "3": {
+        "name": "infermeria"
+        "description": "Sembra che qui ci facessero esperimenti sui malati di mente"
+    }
+    "4": {
+        "name": "sotterranei"
+        "description": "Questo posto è angosciante ancor più degli altri e da un senso di inquietudine"
+
     }
 }
