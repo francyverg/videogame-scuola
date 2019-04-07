@@ -41,7 +41,7 @@ class Bg:
     magenta='\033[45m'
     cyan='\033[46m'
     white='\033[47m'
-    brown='\033[0;33;47m' 
+
 
 class Directions:
     N = 0
